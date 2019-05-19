@@ -1,6 +1,5 @@
 node('MVN'){
-    
-    stage('GIT'){
+      stage('GIT'){
         git branch: 'Dev', url: 'https://github.com/Mukhtarali212/spring-petclinic.git'
     }
     stage ('Build'){
@@ -8,6 +7,6 @@ node('MVN'){
     }
      stage('Archive'){
     archive 'target//*.jar'
-   
+    junit 'target/surefire-reports/*.xml'
 }
 }
