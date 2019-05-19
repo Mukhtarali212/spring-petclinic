@@ -8,6 +8,6 @@ node('MVN'){
     }
      stage('Archive'){
     archive 'target//*.jar'
-    junit 'target/surefire-reports/*.xml'
+   
 }
 }
