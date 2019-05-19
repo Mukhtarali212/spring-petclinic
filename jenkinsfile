@@ -1,0 +1,10 @@
+node('MVN'){
+    
+    stage('GIT'){
+        git branch: 'Dev', url: 'https://github.com/Mukhtarali212/spring-petclinic.git'
+    }
+    stage ('Build'){
+        sh 'mvn package'
+    }
+    
+}
