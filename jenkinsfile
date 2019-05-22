@@ -12,3 +12,4 @@ node('MVN') {
 	junit 'target/surefire-reports/*.xml'
 }
 
+}
