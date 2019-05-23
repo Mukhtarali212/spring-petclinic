@@ -7,7 +7,7 @@ node('MVN') {
         sh 'mvn compile'
         }	
 	stage ('Archive'){
-	archiveArtifacts 'target//*.jar'
+	archive 'target//*.jar'
 	junit 'target/surefire-reports/*.xml'
 
 }
