@@ -1,5 +1,6 @@
-node('MVN') {
-
+pipeline{
+agent none
+ {
       stage('GIT'){
         git branch: 'Dev', url: 'https://github.com/Mukhtarali212/spring-petclinic.git'
     }
@@ -11,4 +12,4 @@ node('MVN') {
 	archive 'target//*.jar'
 	junit 'target/surefire-reports/*.xml'
 }
-
+}
